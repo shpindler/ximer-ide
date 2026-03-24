@@ -1,0 +1,297 @@
+/* Базовые стили кнопки */
+.ximer-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 500;
+    font-family: inherit;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    user-select: none;
+  }
+  
+  /* Отключенное состояние */
+  .ximer-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  
+  /* Состояние загрузки */
+  .ximer-btn-loading {
+    cursor: wait;
+  }
+  
+  /* Стили спиннера загрузки */
+  .ximer-btn-spinner {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+  }
+  
+  .ximer-btn-spinner-icon {
+    width: 100%;
+    height: 100%;
+    animation: spin 0.8s linear infinite;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Размеры кнопок */
+  .ximer-btn-xs {
+    padding: 4px 8px;
+    font-size: 11px;
+    gap: 4px;
+    min-height: 24px;
+  }
+  
+  .ximer-btn-xs .ximer-btn-icon {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .ximer-btn-sm {
+    padding: 6px 12px;
+    font-size: 12px;
+    gap: 6px;
+    min-height: 32px;
+  }
+  
+  .ximer-btn-sm .ximer-btn-icon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .ximer-btn-md {
+    padding: 8px 16px;
+    font-size: 14px;
+    gap: 8px;
+    min-height: 40px;
+  }
+  
+  .ximer-btn-md .ximer-btn-icon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .ximer-btn-lg {
+    padding: 10px 20px;
+    font-size: 16px;
+    gap: 10px;
+    min-height: 48px;
+  }
+  
+  .ximer-btn-lg .ximer-btn-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .ximer-btn-xl {
+    padding: 14px 28px;
+    font-size: 18px;
+    gap: 12px;
+    min-height: 56px;
+  }
+  
+  .ximer-btn-xl .ximer-btn-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Скругленные кнопки */
+  .ximer-btn-rounded {
+    border-radius: 9999px;
+  }
+  
+  /* Кнопки на всю ширину */
+  .ximer-btn-full-width {
+    width: 100%;
+  }
+  
+  /* Варианты кнопок */
+  .ximer-btn-primary {
+    background: linear-gradient(135deg, #0098ea 0%, #35afff 100%);
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 152, 234, 0.2);
+  }
+  
+  .ximer-btn-primary:hover:not(:disabled) {
+    background: linear-gradient(135deg, #0077be 0%, #0098ea 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 152, 234, 0.3);
+  }
+  
+  .ximer-btn-primary:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(0, 152, 234, 0.2);
+  }
+  
+  /* Вторичная кнопка */
+  .ximer-btn-secondary {
+    background: #2d2d30;
+    color: #d4d4d4;
+    border: 1px solid #3e3e42;
+  }
+  
+  .ximer-btn-secondary:hover:not(:disabled) {
+    background: #3e3e42;
+    border-color: #4e4e52;
+    transform: translateY(-1px);
+  }
+  
+  .ximer-btn-secondary:active:not(:disabled) {
+    transform: translateY(0);
+  }
+  
+  /* Кнопка с обводкой */
+  .ximer-btn-outline {
+    background: transparent;
+    color: #0098ea;
+    border: 1px solid #0098ea;
+  }
+  
+  .ximer-btn-outline:hover:not(:disabled) {
+    background: rgba(0, 152, 234, 0.1);
+    transform: translateY(-1px);
+  }
+  
+  .ximer-btn-outline:active:not(:disabled) {
+    transform: translateY(0);
+  }
+  
+  /* Кнопка опасности */
+  .ximer-btn-danger {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    color: white;
+  }
+  
+  .ximer-btn-danger:hover:not(:disabled) {
+    background: linear-gradient(135deg, #c82333 0%, #bd2130 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+  }
+  
+  /* Кнопка успеха */
+  .ximer-btn-success {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+  }
+  
+  .ximer-btn-success:hover:not(:disabled) {
+    background: linear-gradient(135deg, #20c997 0%, #28a745 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+  }
+  
+  /* Кнопка предупреждения */
+  .ximer-btn-warning {
+    background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+    color: #1e1e1e;
+  }
+  
+  .ximer-btn-warning:hover:not(:disabled) {
+    background: linear-gradient(135deg, #ff9800 0%, #ffc107 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(255, 193, 7, 0.3);
+  }
+  
+  /* Иконки внутри кнопки */
+  .ximer-btn-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .ximer-btn-icon-left {
+    margin-right: 4px;
+  }
+  
+  .ximer-btn-icon-right {
+    margin-left: 4px;
+  }
+  
+  .ximer-btn-text {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  /* Анимация риппла эффекта */
+  .ximer-btn {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .ximer-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .ximer-btn:active::after {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+    transition: 0s;
+  }
+  
+  /* Группа кнопок */
+  .ximer-btn-group {
+    display: inline-flex;
+    gap: 8px;
+  }
+  
+  .ximer-btn-group .ximer-btn:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  
+  .ximer-btn-group .ximer-btn:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  .ximer-btn-group .ximer-btn:not(:first-child):not(:last-child) {
+    border-radius: 0;
+  }
+  
+  /* Адаптивность для мобильных устройств */
+  @media (max-width: 768px) {
+    .ximer-btn-md {
+      padding: 6px 12px;
+      font-size: 13px;
+      min-height: 36px;
+    }
+    
+    .ximer-btn-lg {
+      padding: 8px 16px;
+      font-size: 14px;
+      min-height: 44px;
+    }
+  }
