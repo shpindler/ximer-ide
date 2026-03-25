@@ -3,6 +3,7 @@ import Split from 'react-split';
 import { useFileSystem } from '@hooks/useFileSystem';
 import { Button } from './components/common/Button';
 import './App.css';
+import { CodeEditorWithHighlight } from './components/editor/code-editor-with-highlight';
 
 const App: React.FC = () => {
   const {
@@ -83,21 +84,25 @@ const App: React.FC = () => {
         {/* Editor Area */}
         <div className="panel editor-panel">
           {activeFile && (
-            <textarea
-              className="code-editor"
+            // <textarea
+            //   className="code-editor"
+            //   value={activeFile.content}
+            //   onChange={(e) => updateFile(activeFile.id, e.target.value)}
+            //   style={{
+            //     width: '100%',
+            //     height: '100%',
+            //     background: '#1e1e1e',
+            //     color: '#d4d4d4',
+            //     border: 'none',
+            //     padding: '16px',
+            //     fontFamily: 'monospace',
+            //     fontSize: '14px',
+            //     resize: 'none'
+            //   }}
+            // />
+            <CodeEditorWithHighlight
               value={activeFile.content}
-              onChange={(e) => updateFile(activeFile.id, e.target.value)}
-              style={{
-                width: '100%',
-                height: '100%',
-                background: '#1e1e1e',
-                color: '#d4d4d4',
-                border: 'none',
-                padding: '16px',
-                fontFamily: 'monospace',
-                fontSize: '14px',
-                resize: 'none'
-              }}
+              onChange={(e) => updateFile(activeFile.id, e)}
             />
           )}
         </div>

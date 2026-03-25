@@ -1,0 +1,100 @@
+.syntax-highlighted-code {
+    font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    background: #1e1e1e;
+    color: #d4d4d4;
+    overflow-x: auto;
+  }
+  
+  .code-line {
+    display: flex;
+    min-height: 1.5em;
+    white-space: pre;
+  }
+  
+  .code-line:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+  
+  .line-number {
+    display: inline-block;
+    width: 48px;
+    padding-right: 12px;
+    text-align: right;
+    color: #858585;
+    user-select: none;
+    flex-shrink: 0;
+  }
+  
+  .line-content {
+    flex: 1;
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+  
+  /* Ключевые слова */
+  .hljs-keyword {
+    color: #569cd6;
+    font-weight: 500;
+  }
+  
+  /* Типы данных */
+  .hljs-type {
+    color: #4ec9b0;
+  }
+  
+  /* Встроенные функции */
+  .hljs-builtin {
+    color: #dcdcaa;
+  }
+  
+  /* Функции */
+  .hljs-function {
+    color: #dcdcaa;
+  }
+  
+  /* Строки */
+  .hljs-string {
+    color: #ce9178;
+  }
+  
+  /* Числа */
+  .hljs-number {
+    color: #b5cea8;
+  }
+  
+  /* Комментарии */
+  .hljs-comment {
+    color: #6a9955;
+    font-style: italic;
+  }
+  
+  /* Операторы */
+  .hljs-operator {
+    color: #d4d4d4;
+  }
+  
+  /* Идентификаторы */
+  .hljs-identifier {
+    color: #9cdcfe;
+  }
+  
+  /* Скобки */
+  .hljs-brace,
+  .hljs-paren,
+  .hljs-bracket {
+    color: #d4d4d4;
+  }
+  
+  /* Запятые и точки с запятой */
+  .hljs-comma,
+  .hljs-semicolon,
+  .hljs-dot {
+    color: #d4d4d4;
+  }
+  
+  /* Текст по умолчанию */
+  .hljs-text {
+    color: #d4d4d4;
+  }
