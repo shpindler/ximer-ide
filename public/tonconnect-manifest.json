@@ -3,5 +3,6 @@
     "name": "Ximer IDE",
     "iconUrl": "http://localhost:3000/icon.png",
     "termsOfUseUrl": "http://localhost:3000/terms",
-    "privacyPolicyUrl": "http://localhost:3000/privacy"
-}
+    "privacyPolicyUrl": "http://localhost:3000/privacy",
+    "manifestVersion": "2.0"
+  }

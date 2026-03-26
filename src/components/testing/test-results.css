@@ -1,0 +1,309 @@
+.test-results {
+    margin-top: 16px;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
+  /* Навигация по наборам тестов */
+  .test-suites-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .suite-nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    color: var(--text-secondary);
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .suite-nav-btn:hover {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+  }
+  
+  .suite-nav-btn.active {
+    background: var(--accent-primary);
+    border-color: var(--accent-primary);
+    color: white;
+  }
+  
+  .suite-badge {
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: 500;
+  }
+  
+  .suite-badge.passed {
+    background: rgba(78, 201, 176, 0.2);
+    color: var(--success);
+  }
+  
+  .suite-badge.failed {
+    background: rgba(244, 135, 113, 0.2);
+    color: var(--error);
+  }
+  
+  /* Набор тестов */
+  .test-suite {
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .test-suite-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: var(--bg-tertiary);
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .suite-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .suite-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  
+  .suite-stats {
+    display: flex;
+    gap: 8px;
+    font-size: 11px;
+  }
+  
+  .suite-passed {
+    color: var(--success);
+  }
+  
+  .suite-failed {
+    color: var(--error);
+  }
+  
+  .suite-duration {
+    color: var(--text-secondary);
+    font-family: monospace;
+  }
+  
+  .suite-coverage {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 100px;
+  }
+  
+  .coverage-bar {
+    flex: 1;
+    height: 4px;
+    background: var(--bg-primary);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  
+  .coverage-fill {
+    height: 100%;
+    background: var(--accent-primary);
+    transition: width 0.3s ease;
+  }
+  
+  .coverage-percent {
+    font-size: 11px;
+    font-family: monospace;
+    color: var(--text-secondary);
+  }
+  
+  /* Тест-кейсы */
+  .test-cases {
+    background: var(--bg-primary);
+  }
+  
+  .test-case {
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .test-case:last-child {
+    border-bottom: none;
+  }
+  
+  .test-case-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .test-case-header:hover {
+    background: var(--bg-tertiary);
+  }
+  
+  .test-case-icon {
+    flex-shrink: 0;
+  }
+  
+  .test-case-passed .test-case-icon {
+    color: var(--success);
+  }
+  
+  .test-case-failed .test-case-icon {
+    color: var(--error);
+  }
+  
+  .test-case-name {
+    flex: 1;
+    font-size: 13px;
+    font-family: monospace;
+  }
+  
+  .test-case-duration {
+    font-size: 10px;
+    font-family: monospace;
+    color: var(--text-secondary);
+  }
+  
+  .test-expand-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .test-expand-btn:hover {
+    background: var(--bg-primary);
+  }
+  
+  /* Ошибка теста */
+  .test-case-error {
+    padding: 12px 16px 16px 42px;
+    background: rgba(244, 135, 113, 0.05);
+    border-top: 1px solid var(--border-color);
+  }
+  
+  .error-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 8px;
+    color: var(--error);
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  .error-message {
+    padding: 8px;
+    background: var(--bg-secondary);
+    border-radius: 6px;
+    font-size: 11px;
+    font-family: monospace;
+    white-space: pre-wrap;
+    word-break: break-all;
+    margin: 0 0 12px 0;
+  }
+  
+  .error-diff {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 11px;
+  }
+  
+  .diff-expected strong,
+  .diff-actual strong {
+    color: var(--success);
+    margin-right: 8px;
+  }
+  
+  .diff-actual strong {
+    color: var(--error);
+  }
+  
+  .diff-expected code,
+  .diff-actual code {
+    display: block;
+    padding: 4px 8px;
+    background: var(--bg-secondary);
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 10px;
+    margin-top: 4px;
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+  
+  /* Сводка */
+  .test-summary {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-color);
+  }
+  
+  .summary-stats {
+    display: flex;
+    justify-content: space-around;
+    gap: 16px;
+  }
+  
+  .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .stat-value {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .stat-label {
+    font-size: 10px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+  }
+  
+  /* Адаптивность */
+  @media (max-width: 768px) {
+    .test-suite-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    
+    .suite-info {
+      flex-wrap: wrap;
+    }
+    
+    .summary-stats {
+      flex-wrap: wrap;
+    }
+    
+    .stat {
+      min-width: 70px;
+    }
+  }

@@ -1,0 +1,129 @@
+.validation-errors {
+    margin-top: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .errors-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    background: var(--bg-tertiary);
+    border-bottom: 1px solid var(--border-color);
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+  }
+  
+  .errors-count {
+    background: var(--bg-primary);
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 10px;
+  }
+  
+  .errors-list {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .error-group {
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .error-group:last-child {
+    border-bottom: none;
+  }
+  
+  .error-group-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background: var(--bg-primary);
+    font-size: 11px;
+    font-weight: 500;
+  }
+  
+  .error-line {
+    color: var(--accent-primary);
+    font-family: monospace;
+  }
+  
+  .error-count {
+    color: var(--text-secondary);
+    font-size: 10px;
+  }
+  
+  .error-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+  }
+  
+  .error-item:hover {
+    background: var(--bg-tertiary);
+  }
+  
+  .error-item.selected {
+    background: rgba(0, 152, 234, 0.1);
+    border-left-color: var(--accent-primary);
+  }
+  
+  .error-item.error-item {
+    border-left-color: var(--error);
+  }
+  
+  .error-item.warning-item {
+    border-left-color: var(--warning);
+  }
+  
+  .error-icon {
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  
+  .error-item.error-item .error-icon {
+    color: var(--error);
+  }
+  
+  .error-item.warning-item .error-icon {
+    color: var(--warning);
+  }
+  
+  .error-content {
+    flex: 1;
+  }
+  
+  .error-message {
+    font-size: 12px;
+    line-height: 1.4;
+    margin-bottom: 4px;
+  }
+  
+  .error-position {
+    font-size: 10px;
+    font-family: monospace;
+    color: var(--text-secondary);
+  }
+  
+  /* Анимация подсветки строки */
+  @keyframes highlightFlash {
+    0% {
+      background: rgba(244, 135, 113, 0.2);
+    }
+    100% {
+      background: transparent;
+    }
+  }
+  
+  .highlight-error {
+    animation: highlightFlash 1s ease-out;
+  }

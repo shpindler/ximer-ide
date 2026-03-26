@@ -2,7 +2,7 @@ export interface File {
   id: string;
   name: string;
   content: string;
-  language: 'func' | 'typescript' | 'javascript' | 'json';
+  language: 'func' | 'typescript' | 'javascript' | 'json' | 'md' | 'txt' | 'tact';
   lastModified: Date;
 }
 
@@ -22,6 +22,7 @@ export interface CompilationResult {
   size?: number;
   errors?: CompilationError[];
   warnings?: string[];
+  timestamp?: string;
 }
 
 export interface CompilationError {
@@ -29,4 +30,11 @@ export interface CompilationError {
   column: number;
   message: string;
   severity: 'error' | 'warning';
+}
+
+export interface CompilerOptions {
+  version?: string;
+  optimize?: boolean;
+  debug?: boolean;
+  outputFormat?: 'boc' | 'fift' | 'asm';
 }

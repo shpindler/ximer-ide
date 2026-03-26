@@ -1,0 +1,248 @@
+.deployment-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 16px;
+  }
+  
+  .deployment-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .deployment-header h3 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  
+  .deployment-section {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .deployment-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-secondary);
+  }
+  
+  .deployment-hint {
+    font-size: 10px;
+    color: var(--text-secondary);
+    font-weight: normal;
+  }
+  
+  .deployment-input {
+    width: 100%;
+    padding: 8px 12px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 13px;
+    transition: all 0.2s;
+  }
+  
+  .deployment-input:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+  }
+  
+  .deployment-input:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .deployment-status {
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  .deployment-status.ready {
+    background: rgba(78, 201, 176, 0.1);
+    border: 1px solid var(--success);
+  }
+  
+  .deployment-status.not-ready {
+    background: rgba(244, 135, 113, 0.1);
+    border: 1px solid var(--error);
+  }
+  
+  .status-ready {
+    color: var(--success);
+  }
+  
+  .status-not-ready {
+    color: var(--error);
+  }
+  
+  .deployment-error {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: rgba(244, 135, 113, 0.1);
+    border-left: 3px solid var(--error);
+    border-radius: 6px;
+    font-size: 12px;
+    color: var(--error);
+    position: relative;
+  }
+  
+  .error-close {
+    margin-left: auto;
+    background: none;
+    border: none;
+    color: var(--error);
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0 4px;
+  }
+  
+  .error-close:hover {
+    opacity: 0.7;
+  }
+  
+  .deploy-button {
+    margin-top: 4px;
+  }
+  
+  .deployment-result {
+    padding: 12px;
+    background: var(--bg-tertiary);
+    border-radius: 8px;
+    border: 1px solid rgba(78, 201, 176, 0.3);
+  }
+  
+  .result-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--success);
+  }
+  
+  .result-icon {
+    color: var(--success);
+  }
+  
+  .result-address {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    padding: 8px;
+    background: var(--bg-primary);
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 11px;
+    word-break: break-all;
+  }
+  
+  .address-code {
+    flex: 1;
+    color: var(--accent-primary);
+    font-size: 11px;
+  }
+  
+  .address-actions {
+    display: flex;
+    gap: 6px;
+  }
+  
+  .action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .action-btn:hover {
+    background: var(--accent-primary);
+    border-color: var(--accent-primary);
+    color: white;
+  }
+  
+  .result-details {
+    display: flex;
+    gap: 12px;
+    font-size: 11px;
+    padding-top: 8px;
+    border-top: 1px solid var(--border-color);
+  }
+  
+  .detail-label {
+    color: var(--text-secondary);
+  }
+  
+  .detail-value {
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+  
+  .deployment-divider {
+    height: 1px;
+    background: var(--border-color);
+    margin: 8px 0;
+  }
+  
+  .deployment-info {
+    padding: 8px;
+    background: var(--bg-tertiary);
+    border-radius: 6px;
+    font-size: 11px;
+  }
+  
+  .info-text {
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.4;
+  }
+  
+  .info-text strong {
+    color: var(--text-primary);
+  }
+  
+  /* Адаптивность */
+  @media (max-width: 768px) {
+    .deployment-panel {
+      padding: 12px;
+      gap: 12px;
+    }
+    
+    .result-address {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .address-actions {
+      align-self: flex-end;
+    }
+    
+    .result-details {
+      flex-wrap: wrap;
+    }
+  }

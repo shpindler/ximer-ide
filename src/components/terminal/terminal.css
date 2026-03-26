@@ -1,0 +1,113 @@
+.terminal {
+    display: flex;
+    flex-direction: column;
+    background: #0c0c0c;
+    border-top: 1px solid var(--border-color);
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .terminal.expanded {
+    flex: 1;
+    min-height: 150px;
+    max-height: 300px;
+  }
+  
+  .terminal.collapsed {
+    max-height: 40px;
+  }
+  
+  /* Заголовок терминала */
+  .terminal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  
+  .terminal-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .terminal-icon {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--success);
+  }
+  
+  .terminal-name {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .terminal-controls {
+    display: flex;
+    gap: 4px;
+  }
+  
+  .terminal-control-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s;
+  }
+  
+  .terminal-control-btn:hover {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+  }
+  
+  /* Содержимое терминала */
+  .terminal-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  
+  /* Приветственное сообщение */
+  .terminal-welcome {
+    margin-bottom: 12px;
+  }
+  
+  .welcome-line {
+    color: var(--text-secondary);
+    font-size: 11px;
+  }
+  
+  /* Скроллбар */
+  .terminal-content::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .terminal-content::-webkit-scrollbar-track {
+    background: #1e1e1e;
+  }
+  
+  .terminal-content::-webkit-scrollbar-thumb {
+    background: #3e3e42;
+    border-radius: 4px;
+  }
+  
+  .terminal-content::-webkit-scrollbar-thumb:hover {
+    background: #4e4e52;
+  }

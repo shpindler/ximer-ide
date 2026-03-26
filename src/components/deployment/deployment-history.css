@@ -1,0 +1,128 @@
+.deployment-history {
+    margin-top: 8px;
+  }
+  
+  .history-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 12px;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .history-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    background: var(--bg-tertiary);
+    border-radius: 8px;
+    transition: all 0.2s;
+  }
+  
+  .history-item:hover {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    padding: 7px 9px;
+  }
+  
+  .history-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .history-network {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .network-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  .network-dot.mainnet {
+    background: #4ec9b0;
+  }
+  
+  .network-dot.testnet {
+    background: #f0ad4e;
+  }
+  
+  .network-name {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--text-secondary);
+  }
+  
+  .history-address {
+    font-size: 11px;
+    font-family: monospace;
+  }
+  
+  .address-link {
+    background: none;
+    border: none;
+    color: var(--accent-primary);
+    cursor: pointer;
+    font-family: monospace;
+    font-size: 11px;
+    padding: 0;
+    transition: color 0.2s;
+  }
+  
+  .address-link:hover {
+    color: var(--accent-primary-hover);
+    text-decoration: underline;
+  }
+  
+  .history-meta {
+    display: flex;
+    gap: 8px;
+    font-size: 10px;
+    color: var(--text-secondary);
+  }
+  
+  .history-value {
+    font-weight: 500;
+    color: var(--success);
+  }
+  
+  .history-time {
+    font-family: monospace;
+  }
+  
+  .history-explorer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .history-explorer:hover {
+    background: var(--accent-primary);
+    border-color: var(--accent-primary);
+    color: white;
+  }

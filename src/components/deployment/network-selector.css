@@ -1,0 +1,64 @@
+.network-selector {
+    display: flex;
+    gap: 8px;
+    background: var(--bg-primary);
+    border-radius: 10px;
+    padding: 4px;
+  }
+  
+  .network-option {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 12px;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .network-option:hover:not(:disabled) {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+  }
+  
+  .network-option.selected {
+    background: var(--accent-primary);
+    color: white;
+  }
+  
+  .network-option:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .network-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  .network-indicator[data-network="mainnet"] {
+    background: #4ec9b0;
+    box-shadow: 0 0 4px #4ec9b0;
+  }
+  
+  .network-indicator[data-network="testnet"] {
+    background: #f0ad4e;
+    box-shadow: 0 0 4px #f0ad4e;
+  }
+  
+  .network-badge {
+    font-size: 9px;
+    padding: 2px 4px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    text-transform: uppercase;
+  }

@@ -1,0 +1,68 @@
+.terminal-input-container {
+    position: relative;
+    margin-top: 4px;
+  }
+  
+  .terminal-prompt-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .terminal-prompt {
+    flex-shrink: 0;
+    color: var(--success);
+    font-weight: 500;
+    font-size: 12px;
+  }
+  
+  .terminal-input-field {
+    flex: 1;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 12px;
+    line-height: 1.5;
+    outline: none;
+    padding: 0;
+  }
+  
+  .terminal-input-field::placeholder {
+    color: var(--text-secondary);
+    opacity: 0.5;
+  }
+  
+  /* Подсказки автодополнения */
+  .terminal-suggestions {
+    position: absolute;
+    bottom: 100%;
+    left: 24px;
+    margin-bottom: 4px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 4px 0;
+    min-width: 150px;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .terminal-suggestion {
+    display: block;
+    width: 100%;
+    padding: 4px 12px;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-family: monospace;
+    font-size: 11px;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .terminal-suggestion:hover {
+    background: var(--bg-tertiary);
+    color: var(--accent-primary);
+  }

@@ -1,0 +1,207 @@
+.test-runner {
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 16px;
+    transition: all 0.2s;
+  }
+  
+  .test-runner.passed {
+    border-left: 3px solid var(--success);
+  }
+  
+  .test-runner.failed {
+    border-left: 3px solid var(--error);
+  }
+  
+  .test-runner-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .test-runner-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .test-runner-title h3 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  
+  .test-runner-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  
+  .expand-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .expand-btn:hover {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+  }
+  
+  /* Статус */
+  .test-runner-status {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding: 12px;
+    background: var(--bg-tertiary);
+    border-radius: 8px;
+  }
+  
+  .status-icon {
+    font-size: 24px;
+  }
+  
+  .status-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  
+  .status-text {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .status-duration {
+    font-size: 11px;
+    color: var(--text-secondary);
+    font-family: monospace;
+  }
+  
+  /* Прогресс */
+  .test-runner-progress {
+    margin-bottom: 16px;
+  }
+  
+  .progress-bar {
+    height: 4px;
+    background: var(--bg-tertiary);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    transition: width 0.3s ease;
+  }
+  
+  .progress-fill.passed {
+    background: var(--success);
+  }
+  
+  .progress-fill.failed {
+    background: var(--error);
+  }
+  
+  .progress-stats {
+    display: flex;
+    gap: 12px;
+    font-size: 11px;
+  }
+  
+  .stats-passed {
+    color: var(--success);
+  }
+  
+  .stats-failed {
+    color: var(--error);
+  }
+  
+  .stats-total,
+  .stats-coverage {
+    color: var(--text-secondary);
+  }
+  
+  /* Загрузка */
+  .test-runner-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 24px;
+    color: var(--text-secondary);
+  }
+  
+  .loading-spinner {
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .timeout-hint {
+    font-size: 10px;
+    color: var(--text-secondary);
+  }
+  
+  /* Пустое состояние */
+  .test-runner-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 24px;
+    text-align: center;
+    color: var(--text-secondary);
+  }
+  
+  .test-runner-empty p {
+    margin: 0;
+    font-size: 13px;
+  }
+  
+  /* Настройки */
+  .test-runner-settings {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-color);
+  }
+  
+  .setting-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    color: var(--text-secondary);
+    cursor: pointer;
+  }
+  
+  .setting-label input {
+    cursor: pointer;
+  }
+  
+  .setting-label input:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }

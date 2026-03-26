@@ -1,0 +1,69 @@
+.terminal-line {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 2px 0;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 12px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+  
+  .terminal-line-time {
+    flex-shrink: 0;
+    color: var(--text-secondary);
+    font-size: 10px;
+    font-family: monospace;
+  }
+  
+  .terminal-prompt {
+    flex-shrink: 0;
+    color: var(--success);
+    font-weight: 500;
+    user-select: none;
+  }
+  
+  .terminal-line-text {
+    flex: 1;
+  }
+  
+  .terminal-line-input {
+    color: var(--accent-primary);
+  }
+  
+  .terminal-line-input .terminal-prompt {
+    color: var(--accent-primary);
+  }
+  
+  .terminal-line-output {
+    color: var(--text-primary);
+  }
+  
+  .terminal-line-error {
+    color: var(--error);
+  }
+  
+  .terminal-line-success {
+    color: var(--success);
+  }
+  
+  .terminal-line-info {
+    color: var(--warning);
+  }
+  
+  /* Анимация появления */
+  .terminal-line {
+    animation: fadeInUp 0.2s ease;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
